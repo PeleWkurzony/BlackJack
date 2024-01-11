@@ -6,5 +6,5 @@
 - Bartłomiej Szwagrowski
 - Marcel Panc
 
-### Technologie
+## Technologie
 - React
