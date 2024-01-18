@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Collapse, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink } from 'reactstrap';
 import { Link } from 'react-router-dom';
-import './NavMenu.css';
 
 //TODO: Tutaj b�dzie aktualny stan konta i link do otworzenia ustawie�
 
