@@ -9,4 +9,5 @@ Aplikacja webowa pozwalająca na rozgrywkę w popularną grę karcianą BlackJac
 - Marcel Panc (marpancel)
 
 ## Technologie
-- React
+- React (Front-end)
+- ASP.NET (Back-end)
