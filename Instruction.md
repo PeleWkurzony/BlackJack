@@ -24,3 +24,9 @@ systemu ```https://git-scm.com/download/win```
 5. ```git commit``` - otworzy się tobie okienko, w którym macie podsumowanie wszystkich zmian. W niezakomentowanym polu wpisujesz nazwę commita, która ma powstać i opisywać wprowadzone przez ciebie zmiany. Zapisanie pliku kończy powstanie commita. Inna opcją jest ```git commit -m <opis>```, który pozwala ominąć podsumowanie.
 6. ```git push``` - aby wysłać zmiany na serwer
 7. ```git switch main``` - aby przełączyć się na głównego brancha projektu (opcjonalne)
+
+## Zasady i dodatkowe informacje
+* Nie publikujcie nic w branchu main i nie twórzcie tam żadnych zmian
+* Uważajcie na usuwanie czegokolwiek z repozytorium
+* Twórzcie commity przy każdej mniejszej zmianie
+* Używajcie często ```git pull``` aby mieć najnowsze zmiany u siebie lokalnie
