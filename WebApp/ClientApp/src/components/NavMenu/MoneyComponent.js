@@ -1,13 +1,13 @@
-import { useState } from 'react';
+﻿import { useState } from 'react';
 
 export const MoneyComponent = ({ money }) => {
     
-    const [moneyAmmount, setMoneyAmmount] = useState(money);
+    const [moneyAmmount, setMoneyAmmount] = useState(money ? money : 0)
     
     return (
-        <div id="nav-menu-money">
-            <img id="nav-menu-money-icon" src="/Others/cash-coin.svg" alt="$" />
-            <p id="nav-menu-money-ammount"> {moneyAmmount} </p>
+        <div id="nav-menu-money-container">
+            <i className="bi bi-cash-coin" id="nav-menu-money-icon"></i>
+            <p id="nav-menu-money-ammount"> { moneyAmmount } </p>
         </div>
     )
 }
