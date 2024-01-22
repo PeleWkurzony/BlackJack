@@ -1,4 +1,4 @@
-﻿import { MoneyComponent } from "./MoneyComponent";
+import { MoneyComponent } from "./MoneyComponent";
 import { SettingsComponent } from "./SettingsComponent";
 import "./NavMenu.scss";
 
