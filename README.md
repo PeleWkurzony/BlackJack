@@ -10,4 +10,6 @@ Aplikacja webowa pozwalająca na rozgrywkę w popularną grę karcianą BlackJac
 
 ## Technologie
 - React (Front-end)
+- Bootstrap
 - ASP.NET (Back-end)
+- SQLite
