@@ -14,6 +14,7 @@ systemu ```https://git-scm.com/download/win```
 1. Otwierasz konsolę np. cmd lub powershell
 2. Wybierasz folder, w którym ma znajdywać się projekt za pomocą komend ```cd <folder>``` i ```dir```
 3. Wpisujesz ```git clone https://github.com/PeleWkurzonyZSL/BlackJack```
+4. Wykonaj instrukcje z pliku ```Installation.md```
 
 ## Dodawanie własnych udoskonaleń
 1.  ```git pull``` - aby pobrać najnowsze zmiany projektu
