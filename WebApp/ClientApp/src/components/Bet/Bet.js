@@ -1,23 +1,22 @@
-import { useState } from 'react';
+import {useContext, useState} from 'react';
 import { MoneyBet } from "./MoneyBet";
 import { BetController } from './BetController';
 import './Bet.scss';
+import { ProfileContext } from "../Context/ProfileContext";
 
 export const Bet = () => {
     
     const [isBet, setIsBet] = useState(false);
-    const [money, setMoney] = useState(0);
+    const profile = useContext(ProfileContext);
     
     if (isBet === true) {
         return (
-            <BetController onAction={(action) => {console.log(action)}}
-                           canDouble={true} />
+            <BetController onAction={(action) => {console.log(action, profile.moneyBet);}} />
         )
     }
     else if (isBet === false) {
         return (
-            <MoneyBet onBetAccept={(bet) => {
-                setMoney(bet);
+            <MoneyBet onBetAccept={() => {
                 setIsBet(true);
             }}/>
         )   
