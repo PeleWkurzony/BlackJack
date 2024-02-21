@@ -14,7 +14,12 @@ try {
         $UserCondition = Read-Host "Do you want to reinstall all node_modules (Y/N)"
         if ($UserCondition -eq "y") {
             Write-Output "Preparing for removing node_modules"
-            rm ./node_modules -r
+            try {
+                rm ./node_modules -r
+            }
+            catch {
+                
+            }
         }
         if ($UserCondition -ne "n") {
             &$RemoveNodeModules
