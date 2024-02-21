@@ -1,3 +1,21 @@
+function Remove-Node-Modules
+{
+    $UserCondition = Read-Host "Do you want to reinstall all node_modules (Y/N)"
+    if ($UserCondition -eq "y") {
+        Write-Output "Preparing for removing node_modules"
+        if (Test-Path "./node_modules") {
+            rm ./node_modules -r
+        }
+        else {
+            Write-Output "Cannot find node_modules"
+        }
+        return
+    }
+    if ($UserCondition -ne "n") {
+        Remove-Node-Modules
+    }
+}
+
 Write-Output "Preparing for installation"
 $OriginalPath = Get-Location
 Set-Location ..
@@ -10,18 +28,7 @@ catch {
     exit
 }
 try {
-    $RemoveNodeModules = {
-        $UserCondition = Read-Host "Do you want to reinstall all node_modules (Y/N)"
-        if ($UserCondition -eq "y") {
-            Write-Output "Preparing for removing node_modules"
-            rm ./node_modules -r || :
-        }
-        if ($UserCondition -ne "n") {
-            &$RemoveNodeModules
-        }
-        Write-Output "Node_modules will not be removed"
-    }
-    &$RemoveNodeModules
+    Remove-Node-Modules
     Write-Output "Preparing for installation/updating node_modules"
     npm install
 }
