@@ -1,14 +1,26 @@
 import { MoneyComponent } from "./MoneyComponent";
 import { SettingsComponent } from "./SettingsComponent";
 import "./NavMenu.scss";
-import 'bootstrap-icons/font/bootstrap-icons.min.css'
+import 'bootstrap-icons/font/bootstrap-icons.min.css';
 
+/**
+ * Represents a navigation menu component.
+ * @returns {JSX.Element} The JSX element representing the NavMenu component.
+ */
 export const NavMenu = () => {
-    
-    return <>
-        <div id="nav-menu">
-            <MoneyComponent money={10} />
-            <SettingsComponent />
-        </div>
-    </>
-} 
+
+    /**
+     * Renders the navigation menu component.
+     * @returns {JSX.Element} The JSX element representing the NavMenu component.
+     */
+    return (
+        <>
+            <div id="nav-menu">
+                {/* Render MoneyComponent to display user money */}
+                <MoneyComponent money={10} />
+                {/* Render SettingsComponent for user settings */}
+                <SettingsComponent />
+            </div>
+        </>
+    );
+}
