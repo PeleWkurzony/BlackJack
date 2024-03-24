@@ -6,8 +6,8 @@ export const Home = () => {
         <>
             Tutaj będzie ekran początkowy z linkami do postawienia zakładu
             <Bet />
-            <CardComponent name={"1H"} />
-            <CardComponent name={"AS"} isReversed={true} />
+            <CardComponent name={"2D"} />
+            <CardComponent name={"3C"} isReversed={true} />
         </>
     )
 };
