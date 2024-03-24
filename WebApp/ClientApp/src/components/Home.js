@@ -1,5 +1,6 @@
 import { Bet } from './Bet/Bet';
-import {CardComponent} from "./Cards/CardComponent";
+import { CardComponent } from "./Cards/CardComponent";
+import { calculatePoints } from "./Cards/CardsPoints";
 
 export const Home = () => {
     return (
