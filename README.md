@@ -1,6 +1,6 @@
 # BlackJack
 
-Aplikacja webowa pozwalająca na rozgrywkę w popularną grę karcianą BlackJack. Aplikacja przechowuje twoją ilość pieniędzy i historię rozgrywek.
+Aplikacja webowa pozwalająca na rozgrywkę w popularną grę karcianą BlackJack. Aplikacja przechowuje ilość pieniędzy i historię rozgrywek.
 
 ## Członkowie
 - Mateusz Bański (leader) (PeleWkurzony)
