@@ -1,5 +1,6 @@
-import { useContext, useState } from 'react';
-import { ProfileContext } from "../Context/ProfileContext";
+import { useState } from 'react';
+import { useSelector, useDispatch } from "react-redux";
+import { changeMoney, changeBet } from "../Context/ProfileStore";
 
 /**
  * Represents a component for placing a bet with a specific amount of money.
@@ -8,12 +9,11 @@ import { ProfileContext } from "../Context/ProfileContext";
  * @returns {JSX.Element} The JSX element representing the MoneyBet component.
  */
 export const MoneyBet = ({ onBetAccept }) => {
-
-    /**
-     * State representing the amount of bet.
-     * @type {[number, Function]} Tuple with state value and setter function.
-     */
-    const [bet, setBet] = useState(100);
+    
+    const money = useSelector((state) => state.profile.money);
+    const dispatch = useDispatch();
+    
+    const [betAmmount, setBetAmmount] = useState(100);
 
     /**
      * State representing whether the bet amount is invalid.
@@ -22,23 +22,19 @@ export const MoneyBet = ({ onBetAccept }) => {
     const [wrongBet, setWrongBet] = useState(false);
 
     /**
-     * User profile data obtained from context.
-     * @type {object}
-     */
-    const profile = useContext(ProfileContext);
-
-    /**
      * Validates the bet amount and triggers the onBetAccept callback.
      */
     const setupBet = () => {
-        const moneyBet = document.querySelector('input#bet-money-input').valueAsNumber;
-        if (moneyBet > profile.money) {
+        if (betAmmount > money) {
             setWrongBet(true);
             return;
         }
 
         setWrongBet(false);
-        profile.moneyBet = moneyBet;
+        
+        dispatch(changeMoney(money - betAmmount));
+        dispatch(changeBet(betAmmount));
+        
         onBetAccept();
     }
 
@@ -50,12 +46,9 @@ export const MoneyBet = ({ onBetAccept }) => {
         <div id="bet-money-container">
             <p id="bet-money-title"> Ile chcesz postawić? </p>
 
-            <input id="bet-money-input" type="number" value={bet} step="1" onChange={(e) => { e.preventDefault(); setBet(e.target.valueAsNumber) }} />
+            <input id="bet-money-input" type="number" value={betAmmount} step="1" onChange={(e) => { setBetAmmount(e.target.valueAsNumber) }} />
 
-            <button id="bet-money-accept" onClick={(e) => {
-                e.preventDefault();
-                setupBet();
-            }} >
+            <button id="bet-money-accept" onClick={() => { setupBet() }} >
                 Akceptuję
             </button>
             {wrongBet ?
