@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useSelector, useDispatch } from "react-redux";
-import { changeMoney, changeBet } from "../Context/ProfileStore";
+import { changeMoney, changeBet } from "../Context/ProfileSlice";
 
 /**
  * Represents a component for placing a bet with a specific amount of money.

@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { ActionsContext } from "../Context/ActionsContext";
+import {useSelector} from "react-redux";
 
 /**
  * Represents a component for controlling betting actions.
@@ -13,7 +14,9 @@ export const BetController = ({ onAction }) => {
      * Available betting actions obtained from context.
      * @type {object}
      */
-    const availableActions = useContext(ActionsContext);
+    const canDouble = useSelector((state) => state.actions.canDouble);
+    const canSplit = useSelector((state) => state.actions.canSplit);
+    const canInsurance = useSelector((state) => state.actions.canInsurance);
 
     /**
      * Renders buttons for betting actions.
@@ -23,13 +26,13 @@ export const BetController = ({ onAction }) => {
         <div id="bet-options">
             <button className="bet-options-button" onClick={() => onAction('hit')}>Hit</button>
             <button className="bet-options-button" onClick={() => onAction('stand')}>Stand</button>
-            {availableActions.canDouble ?
+            {canDouble ?
                 <button className="bet-options-button" onClick={() => onAction('double')}>Double down</button>
                 : <></>}
-            {availableActions.canSplit ?
+            {canSplit ?
                 <button className="bet-options-button" onClick={() => onAction('split')}>Split</button>
                 : <></>}
-            {availableActions.canInsurance ?
+            {canInsurance ?
                 <button className="bet-options-button" onClick={() => onAction('insurance')}>Insurance</button>
                 : <></>}
         </div>

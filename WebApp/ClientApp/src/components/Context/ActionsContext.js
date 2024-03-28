@@ -1,9 +1,28 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.ActionsContext = void 0;
-const react_1 = require("react");
-exports.ActionsContext = (0, react_1.createContext)({
+﻿import { createSlice } from "@reduxjs/toolkit";
+
+const initialState = {
     canDouble: true,
     canSplit: false,
     canInsurance: false
-});
+};
+
+export const actionsSlice = createSlice({
+    name: 'actions',
+    initialState,
+    reducers: {
+        setCanDouble: (state, action) => {
+            state.canDouble = action.payload;
+        },
+        setCanSplit: (state, action) => {
+            state.canSplit = action.payload;
+        },
+        setCanInsurance: (state, action) => {
+            state.canInsurance = action.payload;
+        }
+    }});
+
+export const { setCanDouble, setCanSplit, setCanInsurance } = actionsSlice.actions;
+
+
+
+

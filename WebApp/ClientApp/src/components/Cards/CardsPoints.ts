@@ -1,5 +1,38 @@
 ﻿
-export const calculatePoints = (cardName: string): number => {
+interface CardInterface {
+    cardValue: string,
+    cardReversed: boolean
+}
+
+interface CardsStructureInterface {
+    croupierCards: CardInterface[],
+    playerCards: CardInterface[]
+}
+
+export const calculateCardPoints = (cards: CardInterface[]) => {
+    let points = 0;
+    let ases = 0
+    for (let i = 0; i < cards.length; i++) {
+        let value = calculatePoints(cards[i].cardValue);
+        if (value === 101) {
+            ases++;
+            points += 11;
+        }
+        else {
+            points += value;
+        }
+
+    }
+
+    while (points > 21 && ases > 0) {
+        points -= 10;
+        ases--;
+    }
+
+    return points;
+}
+
+const calculatePoints = (cardName: string): number => {
     const specialCards = ['J', 'Q', 'K'];
     
     // If cardName.length is equal to 3 that means that the card is 10 point card

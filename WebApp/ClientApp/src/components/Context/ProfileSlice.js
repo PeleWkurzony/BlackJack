@@ -5,7 +5,7 @@ const initialState = {
     bet: 123
 };
 
-const profileSlice = createSlice({
+export const profileSlice = createSlice({
     name: 'profile',
     initialState,
     reducers: {
@@ -19,11 +19,5 @@ const profileSlice = createSlice({
 });
 
 export const { changeMoney, changeBet } = profileSlice.actions;
-
-export const profile = configureStore({
-    reducer: {
-        profile: profileSlice.reducer
-    }
-});
 
 

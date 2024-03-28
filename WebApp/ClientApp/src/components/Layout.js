@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Container } from 'reactstrap';
 import { NavMenu } from "./NavMenu/NavMenu";
-import { profile } from "./Context/ProfileStore";
+import { store } from "./Context/Store";
 import { Provider } from "react-redux";
 
 export class Layout extends Component {
@@ -10,7 +10,7 @@ export class Layout extends Component {
   render() {
     return (
       <div>
-          <Provider store={profile}>
+          <Provider store={store}>
               <NavMenu />
               <Container tag="main">
                   {this.props.children}

@@ -1,6 +1,26 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.calculatePoints = void 0;
+exports.calculateCardPoints = void 0;
+const calculateCardPoints = (cards) => {
+    let points = 0;
+    let ases = 0;
+    for (let i = 0; i < cards.length; i++) {
+        let value = calculatePoints(cards[i].cardValue);
+        if (value === 101) {
+            ases++;
+            points += 11;
+        }
+        else {
+            points += value;
+        }
+    }
+    while (points > 21 && ases > 0) {
+        points -= 10;
+        ases--;
+    }
+    return points;
+};
+exports.calculateCardPoints = calculateCardPoints;
 const calculatePoints = (cardName) => {
     const specialCards = ['J', 'Q', 'K'];
     // If cardName.length is equal to 3 that means that the card is 10 point card
@@ -26,4 +46,3 @@ const calculatePoints = (cardName) => {
     }
     throw new Error('Parameter cardName is not valid value!');
 };
-exports.calculatePoints = calculatePoints;
