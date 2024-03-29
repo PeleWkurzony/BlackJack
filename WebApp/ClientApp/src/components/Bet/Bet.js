@@ -5,6 +5,7 @@ import './Bet.scss';
 import { GameManager } from "../Game/GameManager";
 import { useDispatch, useSelector } from "react-redux";
 import { addCroupierCard, addPlayerCard, processStandOption } from "../Context/CardSlice";
+import { setIsStand } from "../Context/GameManageSlice";
 
 /**
  * Represents a component managing the betting process.
@@ -35,6 +36,7 @@ export const Bet = () => {
                         dispatch(addPlayerCard());
                     }
                     else if (action === 'stand') {
+                        dispatch(setIsStand(true));
                         dispatch(addCroupierCard());
                         dispatch(processStandOption());
                     }

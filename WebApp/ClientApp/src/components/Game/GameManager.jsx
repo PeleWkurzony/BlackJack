@@ -3,43 +3,47 @@ import { calculateCardPoints } from "../Cards/CardsPoints";
 import { useSelector } from "react-redux";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { setGameFinished, setWhoWon } from "../Context/GameManageSlice";
+import { setWhoWon } from "../Context/GameManageSlice";
 
 export const GameManager = () => {
     
     const croupierCards = useSelector((state) => state.card.croupierCards);
     const playerCards = useSelector((state) => state.card.playerCards);
-
-    const dispatch = useDispatch();
     
+    const croupierEnded = useSelector((state) => state.card.croupierEnded);
+    
+    
+    const dispatch = useDispatch();
+    /*
+            
+            !!!!!!!!!!!!!!!!!!! DO NOT TOUCH !!!!!!!!!!!!!!!!!!!
+    
+     */
     useEffect(() => {
+        // Croupier wins
+        // If player have more than 21 points he lose
         if (calculateCardPoints(playerCards) > 21) {
-            dispatch(setGameFinished(true));
             dispatch(setWhoWon('croupier'));
         }
-        else if (calculateCardPoints(croupierCards) > 21) {
-            dispatch(setGameFinished(true));
-            dispatch(setWhoWon('player'));
-        }
-        else if (
-            calculateCardPoints(croupierCards) === 21 && calculateCardPoints(playerCards) !== 21
-        ) {
-            dispatch(setGameFinished(true));
+        // If player stand and croupier have more than player and less than 21
+        else if (croupierEnded && calculateCardPoints(croupierCards) <= 21 && calculateCardPoints(croupierCards) > calculateCardPoints(playerCards)) {
             dispatch(setWhoWon('croupier'));
         }
-        else if (
-            calculateCardPoints(croupierCards) !== 21 && calculateCardPoints(playerCards) !== 21
-        ) {
-            dispatch(setGameFinished(true));
-            dispatch(setWhoWon('player'));
-        }
-        else if (
-            calculateCardPoints(croupierCards) === 21 && calculateCardPoints(playerCards) === 21
-        )
-        {
-            dispatch(setGameFinished(true));
+        //Draw
+        // If player and croupier have 21 points
+        else if (calculateCardPoints(playerCards) === 21 && calculateCardPoints(croupierCards) === 21) {
             dispatch(setWhoWon('draw'));
         }
+        //Player wins
+        // If croupier have more than 21 points he lose
+        else if (calculateCardPoints(croupierCards) > 21) {
+            dispatch(setWhoWon('player'));
+        }
+        // If player stand and player have more than croupier and less than 21
+        else if (croupierEnded && calculateCardPoints(playerCards) <= 21 && calculateCardPoints(playerCards) > calculateCardPoints(croupierCards)) {
+            dispatch(setWhoWon('croupier'));
+        }
+        
     }, [croupierCards, playerCards]);
     
     return (

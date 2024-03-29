@@ -22,7 +22,8 @@ const initialState = {
             cardValue: randomCard(),
             cardReversed: false
         }
-    ]
+    ],
+    croupierEnded: false
 };
 
 export const cardSlice = createSlice({
@@ -41,12 +42,13 @@ export const cardSlice = createSlice({
             }
         },
         processStandOption: (state) => {
-            while (calculateCardPoints(state.croupierCards) < 21) {
+            while (calculateCardPoints(state.croupierCards) < 17) {
                 state.croupierCards.push({
                     cardValue: randomCard(),
                     cardReversed: false
                 })
             }
+            state.croupierEnded = true;
         },
         addPlayerCard: (state) => {
             state.playerCards.push({

@@ -2,7 +2,8 @@
 
 const initialState = {
     gameFinished: false,
-    whoWon: undefined
+    whoWon: undefined,
+    isStand: false
 };
 
 export const gameManagerSlice = createSlice({
@@ -14,11 +15,15 @@ export const gameManagerSlice = createSlice({
         },
         setWhoWon: (state, action) => {
             state.whoWon = action.payload;
+            state.gameFinished = true;
+        },
+        setIsStand: (state, action) => {
+            state.isStand = action.payload;
         }
     }
 });
 
-export const { setGameFinished, setWhoWon } = gameManagerSlice.actions;
+export const { setGameFinished, setIsStand, setWhoWon } = gameManagerSlice.actions;
 
 
 
