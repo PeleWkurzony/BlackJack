@@ -23,7 +23,8 @@ const initialState = {
             cardReversed: false
         }
     ],
-    croupierEnded: false
+    croupierEnded: false,
+    croupierNeedCards: true
 };
 
 export const cardSlice = createSlice({
@@ -42,13 +43,16 @@ export const cardSlice = createSlice({
             }
         },
         processStandOption: (state) => {
-            while (calculateCardPoints(state.croupierCards) < 17) {
+            while (calculateCardPoints(state.croupierCards) < 17 && state.croupierNeedCards) {
                 state.croupierCards.push({
                     cardValue: randomCard(),
                     cardReversed: false
                 })
             }
             state.croupierEnded = true;
+        },
+        setCroupierNeedCards: (state, action) => {
+            state.croupierNeedCards = action.payload;
         },
         addPlayerCard: (state) => {
             state.playerCards.push({
@@ -59,7 +63,7 @@ export const cardSlice = createSlice({
     }
 });
 
-export const { addCroupierCard, processStandOption, addPlayerCard } = cardSlice.actions;
+export const { addCroupierCard, processStandOption, setCroupierNeedCards, addPlayerCard } = cardSlice.actions;
 
 
 
