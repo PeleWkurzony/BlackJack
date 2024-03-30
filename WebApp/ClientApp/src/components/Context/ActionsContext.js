@@ -18,10 +18,20 @@ export const actionsSlice = createSlice({
         },
         setCanInsurance: (state, action) => {
             state.canInsurance = action.payload;
+        },
+        resetActions: (state) => {
+            state.canDouble = true;
+            state.canSplit = false;
+            state.canInsurance = false;
         }
     }});
 
-export const { setCanDouble, setCanSplit, setCanInsurance } = actionsSlice.actions;
+export const { 
+    setCanDouble,
+    setCanSplit,
+    setCanInsurance,
+    resetActions
+} = actionsSlice.actions;
 
 
 

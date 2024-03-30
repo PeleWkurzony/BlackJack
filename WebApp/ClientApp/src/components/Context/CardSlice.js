@@ -62,6 +62,30 @@ export const cardSlice = createSlice({
         },
         splitPlayerCards: (state) => {
             state.playerCards.pop();
+        },
+        resetCards: (state) => {
+            state.croupierCards = [
+                {
+                    cardValue: randomCard(),
+                    cardReversed: false
+                },
+                {
+                    cardValue: randomCard(),
+                    cardReversed: true
+                }
+            ];
+            state.playerCards = [
+                {
+                    cardValue: randomCard(),
+                    cardReversed: false
+                },
+                {
+                    cardValue: randomCard(),
+                    cardReversed: false
+                }
+            ];
+            state.croupierEnded = false;
+            state.croupierNeedCards = true;
         }
     }
 });
@@ -70,7 +94,8 @@ export const { addCroupierCard,
     processStandOption,
     setCroupierNeedCards,
     addPlayerCard,
-    splitPlayerCards    
+    splitPlayerCards,
+    resetCards
 } = cardSlice.actions;
 
 

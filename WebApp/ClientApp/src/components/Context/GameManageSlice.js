@@ -19,11 +19,21 @@ export const gameManagerSlice = createSlice({
         },
         setIsStand: (state, action) => {
             state.isStand = action.payload;
+        },
+        resetGameManager: (state) => {
+            state.gameFinished = false;
+            state.whoWon = undefined;
+            state.isStand = false;
         }
     }
 });
 
-export const { setGameFinished, setIsStand, setWhoWon } = gameManagerSlice.actions;
+export const { 
+    setGameFinished,
+    setIsStand,
+    setWhoWon,
+    resetGameManager
+} = gameManagerSlice.actions;
 
 
 

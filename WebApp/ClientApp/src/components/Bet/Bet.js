@@ -4,10 +4,13 @@ import { BetController } from './BetController';
 import './Bet.scss';
 import { GameManager } from "../Game/GameManager";
 import { useDispatch, useSelector } from "react-redux";
-import { addCroupierCard, addPlayerCard, processStandOption, splitPlayerCards } from "../Context/CardSlice";
-import { setIsStand } from "../Context/GameManageSlice";
+import { addCroupierCard, addPlayerCard, processStandOption, resetCards, splitPlayerCards } from "../Context/CardSlice";
+import { resetGameManager, setIsStand } from "../Context/GameManageSlice";
 import { changeBet, changeMoney } from "../Context/ProfileSlice";
-import { setCanSplit, setCanDouble } from "../Context/ActionsContext";
+import { setCanSplit, setCanDouble, setCanInsurance, resetActions } from "../Context/ActionsContext";
+import { setInsuranceMoney } from "../Context/ProfileSlice";
+import { calculateCardPoints } from "../Cards/CardsPoints";
+import { EndGameComponent } from "./EndGameComponent";
 
 /**
  * Represents a component managing the betting process.
@@ -23,9 +26,11 @@ export const Bet = () => {
     const dispatch = useDispatch();
     const gameFinished = useSelector((state) => state.gameManager.gameFinished);
     const whoWon = useSelector((state) => state.gameManager.whoWon);
+    const croupiersCards = useSelector((state) => state.card.croupierCards);
     
     const money = useSelector((state) => state.profile.money);
     const bet = useSelector((state) => state.profile.bet);
+    const insuranceMoney = useSelector((state) => state.profile.insuranceMoney);
 
     /**
      * Conditional rendering of components based on 'isBet' state.
@@ -62,18 +67,36 @@ export const Bet = () => {
                         // Disable split option
                         dispatch(setCanSplit(false));
                         // Set a double money Bet
-                        dispatch(changeMoney(money - bet));
                         dispatch(changeBet(bet * 2));
                         // Process split option
                         dispatch(splitPlayerCards());
                     }
                     else if (action === 'insurance') {
-                        // TODO
+                        // Disable insurance option
+                        dispatch(setCanInsurance(false));
+                        // Remove half of bet money from all player money
+                        dispatch(changeMoney(money - (bet / 2)));
+                        // Check if second croupier's card is 10 points required for Blackjack
+                        // if true set money to be repaid to player
+                        if (calculateCardPoints(croupiersCards[1]) === 10) {
+                            setInsuranceMoney(bet);
+                        }
                     }
                 }} /> :
                     <>
-                        <h1> Thanks for playing our game!</h1>
-                        <h2> {whoWon} won the game!</h2>
+                        <EndGameComponent whoWon={whoWon} beforeRestart={() => {
+                            if (whoWon === 'player') {
+                                dispatch(changeMoney(
+                                    (bet * 2) + insuranceMoney
+                                ));
+                                dispatch(changeBet(0));
+                            }
+                        }} onRestart={() => {
+                            dispatch(resetGameManager());
+                            dispatch(resetActions());
+                            dispatch(resetCards());
+                            setIsBet(false);
+                        }} />
                     </>
                 }
                 <GameManager />

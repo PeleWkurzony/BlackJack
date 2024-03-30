@@ -56,7 +56,8 @@ export const GameManager = () => {
     
     // Available actions logic
     useEffect(() => {
-        if (calculateCardPoints(playerCards[0]) === calculateCardPoints(playerCards[1])) {
+        console.log(calculateCardPoints([playerCards[0]]));
+        if (calculateCardPoints([playerCards[0]]) === calculateCardPoints([playerCards[1]])) {
             dispatch(setCanSplit(true));
         }
         if (croupierCards[0].cardValue[0] === 'A') {
