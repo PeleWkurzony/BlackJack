@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { setWhoWon } from "../Context/GameManageSlice";
 import { setCroupierNeedCards } from "../Context/CardSlice";
+import { setCanInsurance, setCanSplit } from "../Context/ActionsContext";
 
 export const GameManager = () => {
     
@@ -20,6 +21,7 @@ export const GameManager = () => {
             !!!!!!!!!!!!!!!!!!! DO NOT TOUCH !!!!!!!!!!!!!!!!!!!
     
      */
+    // Who win logic
     useEffect(() => {
         // Croupier wins
         // If player have more than 21 points he lose
@@ -42,13 +44,25 @@ export const GameManager = () => {
         // If croupier have more than 21 points he lose
         else if (calculateCardPoints(croupierCards) > 21) {
             dispatch(setWhoWon('player'));
+            dispatch(setCroupierNeedCards(false));
         }
         // If player stand and player have more than croupier and less than 21
         else if (croupierEnded && calculateCardPoints(playerCards) <= 21 && calculateCardPoints(playerCards) > calculateCardPoints(croupierCards)) {
             dispatch(setWhoWon('croupier'));
+            dispatch(setCroupierNeedCards(false));
         }
         
     }, [croupierCards, playerCards]);
+    
+    // Available actions logic
+    useEffect(() => {
+        if (calculateCardPoints(playerCards[0]) === calculateCardPoints(playerCards[1])) {
+            dispatch(setCanSplit(true));
+        }
+        if (croupierCards[0].cardValue[0] === 'A') {
+            dispatch(setCanInsurance(true));
+        }
+    }, []);
     
     return (
         <>

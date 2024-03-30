@@ -2,7 +2,8 @@
 
 const initialState = {
     money: 3000,
-    bet: 123
+    bet: 123,
+    insuranceMoney: 0
 };
 
 export const profileSlice = createSlice({
@@ -14,10 +15,17 @@ export const profileSlice = createSlice({
         },
         changeBet: (state, action) => {
             state.bet = action.payload;
+        },
+        setInsuranceMoney: (state, action) => {
+            state.insuranceMoney = action.payload;
         }
     }
 });
 
-export const { changeMoney, changeBet } = profileSlice.actions;
+export const { 
+    changeMoney,
+    changeBet,
+    setInsuranceMoney
+} = profileSlice.actions;
 
 

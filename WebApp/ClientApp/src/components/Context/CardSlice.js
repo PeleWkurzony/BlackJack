@@ -59,11 +59,19 @@ export const cardSlice = createSlice({
                 cardValue: randomCard(),
                 cardReversed: false
             })
+        },
+        splitPlayerCards: (state) => {
+            state.playerCards.pop();
         }
     }
 });
 
-export const { addCroupierCard, processStandOption, setCroupierNeedCards, addPlayerCard } = cardSlice.actions;
+export const { addCroupierCard,
+    processStandOption,
+    setCroupierNeedCards,
+    addPlayerCard,
+    splitPlayerCards    
+} = cardSlice.actions;
 
 
 
