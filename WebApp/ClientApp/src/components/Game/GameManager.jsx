@@ -49,7 +49,7 @@ export const GameManager = () => {
         }
         // If player stand and player have more than croupier and less than 21
         else if (croupierEnded && calculateCardPoints(playerCards) <= 21 && calculateCardPoints(playerCards) > calculateCardPoints(croupierCards)) {
-            dispatch(setWhoWon('croupier'));
+            dispatch(setWhoWon('player'));
             dispatch(setCroupierNeedCards(false));
         }
         
