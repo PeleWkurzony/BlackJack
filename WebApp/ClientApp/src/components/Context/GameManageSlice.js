@@ -7,7 +7,8 @@ const initialState = {
     // Indicates the winner of the game (undefined if game is ongoing)
     whoWon: undefined,
     // Indicates whether the player has chosen to stand
-    isStand: false
+    isStand: false,
+    gameStarted: false
 };
 
 /**
@@ -43,6 +44,9 @@ export const gameManagerSlice = createSlice({
         setIsStand: (state, action) => {
             state.isStand = action.payload;
         },
+        setGameStarted: (state, action) => {
+            state.gameStarted = action.payload;
+        },
         /**
          * Reducer for resetting the game manager state to default values.
          * @param {object} state - The current state of the game manager slice.
@@ -51,6 +55,7 @@ export const gameManagerSlice = createSlice({
             state.gameFinished = false;
             state.whoWon = undefined;
             state.isStand = false;
+            state.gameStarted = false;
         }
     }
 });
@@ -60,5 +65,6 @@ export const {
     setGameFinished,
     setIsStand,
     setWhoWon,
+    setGameStarted,
     resetGameManager
 } = gameManagerSlice.actions;

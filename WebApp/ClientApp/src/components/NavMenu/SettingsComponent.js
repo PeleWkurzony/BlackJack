@@ -1,6 +1,6 @@
 ﻿import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setPlayMusic } from "../Context/ProfileSlice";
+import { setPlayMusic, setRemoveParticle } from "../Context/ProfileSlice";
 
 /**
  * Represents a component for displaying settings.
@@ -10,6 +10,7 @@ export const SettingsComponent = () => {
 
     const dispatch = useDispatch();
     const playMusic = useSelector((state) => state.profile.playMusic);
+    const removeParticles = useSelector((state) => state.profile.removeParticle);
     
     const [collapsed, setCollapsed] = useState(true);
     
@@ -32,6 +33,11 @@ export const SettingsComponent = () => {
                     <input type="checkbox" id="play-audio-settings-options"
                            checked={playMusic}
                            onChange={() => {dispatch(setPlayMusic(!playMusic))}} />
+                    
+                    <label htmlFor="nav-settings-remove-particles"> Wyłącz przeszkadzające efekty wizualne: </label>
+                    <input id="nav-settings-remove-particles" type="checkbox"
+                           checked={removeParticles}
+                           onChange={() => { dispatch(setRemoveParticle(!removeParticles)) }} />
                 </div>
             }
         </div>

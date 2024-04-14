@@ -14,6 +14,7 @@ export const GameManager = () => {
     const playerCards = useSelector((state) => state.card.playerCards);
     
     const croupierEnded = useSelector((state) => state.card.croupierEnded);
+    const whoWon = useSelector((state) => state.gameManager.whoWon);
     
     
     const dispatch = useDispatch();
@@ -69,9 +70,9 @@ export const GameManager = () => {
         <>
             <div id="gameContainer">
                 <div id="croupierCards">
-                    <h3>Croupier Points: {calculateCardPoints(croupierCards)}</h3>
+                    <h3>Croupier Points: {calculateCardPoints(croupierCards, true)}</h3>
                     {croupierCards.map((card, index) =>
-                        <CardComponent name={card.cardValue} isReversed={card.cardReversed} key={index} />
+                        <CardComponent name={card.cardValue} isReversed={card.cardReversed } key={index} />
                     )}
                    
                 </div>

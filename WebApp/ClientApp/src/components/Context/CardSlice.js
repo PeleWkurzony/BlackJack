@@ -80,6 +80,9 @@ export const cardSlice = createSlice({
          */
         setCroupierNeedCards: (state, action) => {
             state.croupierNeedCards = action.payload;
+            for (const card of state.croupierCards) {
+                card.cardReversed = false;
+            }
         },
         /**
          * Reducer for adding a player's card.

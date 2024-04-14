@@ -1,11 +1,17 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.calculateCardPoints = void 0;
-const calculateCardPoints = (cards) => {
+const calculateCardPoints = (cards, withoutReversed = false) => {
     let points = 0;
     let ases = 0;
     for (let i = 0; i < cards.length; i++) {
-        let value = calculatePoints(cards[i].cardValue);
+        let value = 0;
+        if (!withoutReversed) {
+            value = calculatePoints(cards[i].cardValue);
+        }
+        else if (withoutReversed && !cards[i].cardReversed) {
+            value = calculatePoints(cards[i].cardValue);
+        }
         if (value === 101) {
             ases++;
             points += 11;
