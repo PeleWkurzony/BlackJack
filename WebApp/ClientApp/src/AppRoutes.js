@@ -1,4 +1,5 @@
 import { Home } from "./components/Home";
+import Settings from "./components/Settings";
 
 const AppRoutes = [
   {
@@ -12,7 +13,11 @@ const AppRoutes = [
   // {
   //   path: '/fetch-data',
   //   element: <FetchData />
-  // }
+    // }
+    {
+        path: '/settings',
+        element: <Settings />
+    }
 ];
 
 export default AppRoutes;

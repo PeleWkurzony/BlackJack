@@ -11,7 +11,7 @@ export const SettingsComponent = () => {
     return (
         <div id="nav-menu-settings-container">
             {/* Render settings icon */}
-            <i id="nav-menu-settings-icon" className="bi bi-gear"></i>
+            <a href="/settings"> <i id="nav-menu-settings-icon" className="bi bi-gear"></i></a>
         </div>
     );
 }
