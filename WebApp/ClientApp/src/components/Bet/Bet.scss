@@ -1,0 +1,56 @@
+#bet-money-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#bet-money-title {
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-weight:bold;
+}
+
+#bet-money-input {
+    width: 200px;
+    height: 40px;
+    font-size: 18px;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#bet-money-accept {
+    background-color: #007BFF;
+    color: #fff;
+    font-size: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#bet-money-accept:hover {
+    background-color: #0056b3;
+}
+
+
+#bet-money-wrong-bet {
+    color: red;
+    font-size: 18px;
+    margin-top: 10px;
+    animation: flicker 1s infinite alternate; /* Dodajemy animacjê migotania */
+}
+
+@keyframes flicker {
+    0% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

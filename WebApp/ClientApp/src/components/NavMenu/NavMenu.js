@@ -18,8 +18,9 @@ export const NavMenu = () => {
             <div id="nav-menu">
                 {/* Render MoneyComponent to display user money */}
                 <MoneyComponent money={10} />
+                <div class="logo glowing-text">Blackjack Casino</div>
                 {/* Render SettingsComponent for user settings */}
-                <SettingsComponent />
+                        <SettingsComponent />
             </div>
         </>
     );
