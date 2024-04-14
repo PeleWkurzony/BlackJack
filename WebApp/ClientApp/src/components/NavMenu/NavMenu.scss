@@ -1,1 +1,120 @@
-﻿
+﻿$primary-color: #b81414; // Czerwony kolor, często spotykany w kasynach
+$secondary-color: #000; // Jasny złoty kolor
+
+#nav-menu {
+    background: linear-gradient(45deg, $primary-color, $secondary-color);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; // Dodajemy pozycję względną dla kontenera fajerwerków
+    overflow: hidden; // Ukrywamy fajerwerki, które wychodzą poza nagłówek
+    animation: glow2 10s infinite linear; // Dodajemy animację pulsowania tła z funkcją łagodzenia
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+}
+
+@keyframes glow2 {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    25% {
+        background-position: 25% 50%;
+    }
+
+    50% {
+        background-position: 50% 50%;
+    }
+
+    75% {
+        background-position: 75% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.logo {
+    font-size: 40px; // Zwiększamy rozmiar czcionki dla bardziej dramatycznego efektu
+    color: #ffd700;
+    margin-right:8%;
+    text-transform: uppercase; // Zamieniamy tekst na wielkie litery
+    letter-spacing: 2px; // Dodajemy nieco odstępu między literami
+    padding: 2px 20px; // Dodajemy wypełnienie dla lepszego wyglądu
+    border-radius: 10px; // Zaokrąglamy krawędzie
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2), 1px 1px 2px rgba(0, 0, 0, 0.2), -1px -1px 2px rgba(255, 255, 255, 0.5); // Dodajemy cień dla efektu 3D
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px $primary-color, 0 0 20px $primary-color, 0 0 30px $primary-color;
+    }
+
+    50% {
+        text-shadow: 0 0 20px $primary-color, 0 0 30px $primary-color, 0 0 40px $primary-color;
+    }
+
+    100% {
+        text-shadow: 0 0 10px $primary-color, 0 0 20px $primary-color, 0 0 30px $primary-color;
+    }
+}
+
+.glowing-text {
+    animation: glow 1.5s infinite alternate;
+}
+
+
+#nav-menu-money-container {
+    display: flex; // Ustawienie kontenera na flexbox
+    align-items: center; // Wyśrodkowanie elementów w pionie
+    padding: 12px 16px; // Wypełnienie wewnętrzne ramki
+    border-radius: 30px; // Zaokrąglenie krawędzi
+    color: #ffd700;
+    font-size: 28px; // Rozmiar czcionki
+    font-weight: bold; // Pogrubienie tekstu
+    text-align: center; // Wyśrodkowanie tekstu
+
+    animation: pulse 2s infinite, flicker 3s infinite; // Animacja pulsacji i migotania
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes flicker {
+    0%, 100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.8;
+    }
+}
+
+#nav-menu-money-icon {
+    margin-right: 12px; // Margines z prawej strony ikony
+    font-size: 32px; // Rozmiar ikony
+}
+
+#nav-menu-money-ammount {
+    margin-left: 20px
+}
+
+#nav-menu-settings-icon {
+    color: #ffd700;
+    font-size: 28px;
+}

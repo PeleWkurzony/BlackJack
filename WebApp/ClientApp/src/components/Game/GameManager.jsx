@@ -56,7 +56,6 @@ export const GameManager = () => {
     
     // Available actions logic
     useEffect(() => {
-        console.log(calculateCardPoints([playerCards[0]]));
         if (calculateCardPoints([playerCards[0]]) === calculateCardPoints([playerCards[1]])) {
             dispatch(setCanSplit(true));
         }

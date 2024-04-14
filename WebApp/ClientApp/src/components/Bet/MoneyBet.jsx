@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import './Bet.scss';
 import { useSelector, useDispatch } from "react-redux";
 import { changeMoney, changeBet } from "../Context/ProfileSlice";
 
