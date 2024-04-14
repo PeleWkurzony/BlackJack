@@ -66,18 +66,20 @@ export const GameManager = () => {
     }, []);
     
     return (
-        <><div id="playerEq">
-            <h3>Krupier:</h3>
-            {croupierCards.map((card, index) =>
-                <CardComponent name={card.cardValue} isReversed={card.cardReversed} key={index} />
-            )}
-            Points: {calculateCardPoints(croupierCards)}
-            
-            <h3>Player:</h3><p>
-            {playerCards.map((card, index) =>
-                <CardComponent name={card.cardValue} isReversed={card.cardReversed} key={index} />
-            )}
-                    Points: {calculateCardPoints(playerCards)}</p></div>
+        <>
+            <div id="game-deck">
+                <h3>Krupier:</h3>
+                {croupierCards.map((card, index) =>
+                    <CardComponent name={card.cardValue} isReversed={card.cardReversed} key={index} />
+                )}
+                Points: {calculateCardPoints(croupierCards)}
+                
+                <h3>Player:</h3>
+                {playerCards.map((card, index) =>
+                    <CardComponent name={card.cardValue} isReversed={card.cardReversed} key={index} />
+                )}
+                Points: {calculateCardPoints(playerCards)}
+            </div>
         </>
     )
 }
