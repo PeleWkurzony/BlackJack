@@ -6,6 +6,7 @@ import { useDispatch } from "react-redux";
 import { setWhoWon } from "../Context/GameManageSlice";
 import { setCroupierNeedCards } from "../Context/CardSlice";
 import { setCanInsurance, setCanSplit } from "../Context/ActionsContext";
+import "./GameManager.scss";
 
 export const GameManager = () => {
     
@@ -65,17 +66,18 @@ export const GameManager = () => {
     }, []);
     
     return (
-        <>
+        <><div id="playerEq">
             <h3>Krupier:</h3>
             {croupierCards.map((card, index) =>
                 <CardComponent name={card.cardValue} isReversed={card.cardReversed} key={index} />
             )}
             Points: {calculateCardPoints(croupierCards)}
-            <h3>Player:</h3>
+            
+            <h3>Player:</h3><p>
             {playerCards.map((card, index) =>
                 <CardComponent name={card.cardValue} isReversed={card.cardReversed} key={index} />
             )}
-            Points: {calculateCardPoints(playerCards)}
+                    Points: {calculateCardPoints(playerCards)}</p></div>
         </>
     )
 }
