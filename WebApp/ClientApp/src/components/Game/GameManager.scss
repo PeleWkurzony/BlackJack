@@ -1,31 +1,31 @@
 #gameContainer {
     display: flex;
-    justify-content: space-between; /* Roz³o¿enie elementów na krañcach kontenera */
-    align-items: center; /* Wyœrodkowanie elementów wzd³u¿ osi pionowej */
+    justify-content: space-between; /* RozÅ‚oÅ¼enie elementÃ³w na kraÅ„cach kontenera */
+    align-items: center; /* WyÅ›rodkowanie elementÃ³w wzdÅ‚uÅ¼ osi pionowej */
     width: 100%;
     height: 200%;
     margin-top:2%;
 }
 
 #croupierCards, #playerCards {
-    flex: 1; /* Elastyczne rozci¹ganie siê elementów, aby zajmowaæ tyle miejsca, ile jest dostêpne */
-    margin: 0 10px; /* Dodatkowe marginesy miêdzy elementami */
+    flex: 1; /* Elastyczne rozciÄ…ganie siÄ™ elementÃ³w, aby zajmowaÄ‡ tyle miejsca, ile jest dostÄ™pne */
+    margin: 0 10px; /* Dodatkowe marginesy miÄ™dzy elementami */
     width:100%;
     height: 50%;
     padding:10px;
 }
-$primary-color: #b81414; // Czerwony kolor, czêsto spotykany w kasynach
-$secondary-color: #000; // Jasny z³oty kolor
+$primary-color: #b81414; // Czerwony kolor, czÄ™sto spotykany w kasynach
+$secondary-color: #000; // Jasny zÅ‚oty kolor
 
 h3 {
-    font-size: 35px; // Zwiêkszamy rozmiar czcionki dla bardziej dramatycznego efektu
+    font-size: 35px; // ZwiÄ™kszamy rozmiar czcionki dla bardziej dramatycznego efektu
     color: #ffd700;
     background: linear-gradient(45deg, $secondary-color, $primary-color,);
     border: 3px black solid;
     margin-right: 8%;
     text-transform: uppercase; // Zamieniamy tekst na wielkie litery
-    letter-spacing: 2px; // Dodajemy nieco odstêpu miêdzy literami
-    padding: 2px 20px; // Dodajemy wype³nienie dla lepszego wygl¹du
-    border-radius: 10px; // Zaokr¹glamy krawêdzie
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2), 1px 1px 2px rgba(0, 0, 0, 0.2), -1px -1px 2px rgba(255, 255, 255, 0.5); // Dodajemy cieñ dla efektu 3D
+    letter-spacing: 2px; // Dodajemy nieco odstÄ™pu miÄ™dzy literami
+    padding: 2px 20px; // Dodajemy wypeÅ‚nienie dla lepszego wyglÄ…du
+    border-radius: 10px; // ZaokrÄ…glamy krawÄ™dzie
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2), 1px 1px 2px rgba(0, 0, 0, 0.2), -1px -1px 2px rgba(255, 255, 255, 0.5); // Dodajemy cieÅ„ dla efektu 3D
 }

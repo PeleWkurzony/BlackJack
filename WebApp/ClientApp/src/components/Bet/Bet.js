@@ -88,7 +88,7 @@ export const Bet = () => {
                         <EndGameComponent whoWon={whoWon} beforeRestart={() => {
                             if (whoWon === 'player') {
                                 dispatch(changeMoney(
-                                    (bet * 2) + insuranceMoney
+                                    (bet * 2) + insuranceMoney + money
                                 ));
                                 dispatch(changeBet(0));
                             }
