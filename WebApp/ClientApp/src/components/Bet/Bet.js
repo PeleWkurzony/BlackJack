@@ -40,7 +40,7 @@ export const Bet = () => {
     if (isBet === true) {
         return (
             <>
-                <GameManager />
+                <GameManager /><div id="game-managerbox">
                 {!gameFinished ? 
                 <BetController onAction={(action) => { 
                     if (action === 'hit') {
@@ -100,7 +100,7 @@ export const Bet = () => {
                         }} />
                     </>
                 }
-                
+                </div>
             </>
         )
     }

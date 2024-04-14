@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { ActionsContext } from "../Context/ActionsContext";
-import {useSelector} from "react-redux";
+import { useSelector } from "react-redux";
+import './BetController.scss';
 
 /**
  * Represents a component for controlling betting actions.
