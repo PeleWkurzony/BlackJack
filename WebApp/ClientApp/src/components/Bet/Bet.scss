@@ -39,7 +39,7 @@
 
 
 #bet-money-wrong-bet {
-    color: red;
+    color: #b81414;
     font-size: 18px;
     margin-top: 10px;
     animation: flicker 1s infinite alternate; /* Dodajemy animacjê migotania */
@@ -53,4 +53,10 @@
     100% {
         opacity: 1;
     }
+}
+
+#game-managerbox {
+    margin-top:2%;
+    margin-right:40%;
+    float:right;
 }
