@@ -49,7 +49,13 @@ export const MoneyBet = ({ onBetAccept }) => {
 
             <input id="bet-money-input" type="number" value={betAmmount} step="1" onChange={(e) => { setBetAmmount(e.target.valueAsNumber) }} />
 
-            <button id="bet-money-accept" onClick={() => { setupBet() }} >
+            <button id="bet-money-accept" onClick={() => { 
+                setupBet();
+                const audio = document.querySelector('#background-music');
+                if (audio) {
+                    audio.play();
+                }
+            }} >
                 Akceptuję
             </button>
             {wrongBet ?
