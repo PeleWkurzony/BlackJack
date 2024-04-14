@@ -6,8 +6,8 @@ const initialState = {
     money: 3000,
     // The current bet amount
     bet: 123,
-    // The amount of money reserved for insurance
-    insuranceMoney: 0
+    insuranceMoney: 0,
+    playMusic: true
 };
 
 /**
@@ -41,6 +41,9 @@ export const profileSlice = createSlice({
          */
         setInsuranceMoney: (state, action) => {
             state.insuranceMoney = action.payload;
+        },
+        setPlayMusic: (state, action) => {
+            state.playMusic = action.payload;
         }
     }
 });
@@ -49,7 +52,8 @@ export const profileSlice = createSlice({
 export const {
     changeMoney,
     changeBet,
-    setInsuranceMoney
+    setInsuranceMoney,
+    setPlayMusic
 } = profileSlice.actions;
 
 // Configure the Redux store with the profile slice

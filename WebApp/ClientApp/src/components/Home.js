@@ -1,6 +1,7 @@
 import { Bet } from './Bet/Bet';
 import "./Style.scss";
 import { Croupier } from './Home/Croupier';
+import { BackgroundMusic } from './Home/BackgroundMusic';
 
 /**
  * Represents the main screen component of the game.
@@ -14,6 +15,7 @@ export const Home = () => {
      */
     return (
         <>
+            <BackgroundMusic />
             <Croupier />
             <Bet />
         </>

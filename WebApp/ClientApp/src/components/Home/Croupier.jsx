@@ -17,14 +17,14 @@ export const Croupier = () => {
             {/* Falling tokens */}
             <img id="token-fall" alt="" className="right" src={token}></img>
             <img id="token-fall" alt="" className="right2" src={token}></img>
-            <img id="token-fall" alt="" className="left" src={token}></img>
-            <img id="token-fall" alt="" className="left2" src={token}></img>
-            <img id="token-fall" alt="" className="right" src={token}></img>
-
-            <img id="token-fall" alt="" className="right2" src={token2}></img>
-            <img id="token-fall" alt="" className="left" src={token2}></img>
-            <img id="token-fall" alt="" className="left2" src={token2}></img>
-            <img id="token-fall" alt="" className="right" src={token2}></img>
+            <img id="token-fall"  alt="" className="left" src={token}></img>
+            <img id="token-fall"  alt="" className="left2" src={token}></img>
+            <img id="token-fall"  alt="" className="right" src={token}></img>
+            
+            <img id="token-fall2" alt="" className="right2" src={token2}></img>
+            <img id="token-fall2"  alt="" className="left" src={token2}></img>
+            <img id="token-fall2"  alt="" className="left2" src={token2}></img>
+            <img id="token-fall2"  alt="" className="right" src={token2}></img>
         </div>
     );
 }
