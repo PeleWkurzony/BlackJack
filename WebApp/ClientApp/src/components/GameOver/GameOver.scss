@@ -32,3 +32,21 @@ header {
 h1 {
     font-size: 3em;
 }
+/* Styling for the game section */
+.game-section {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
