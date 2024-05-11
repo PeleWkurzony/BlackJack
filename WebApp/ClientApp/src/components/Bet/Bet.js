@@ -106,11 +106,16 @@ export const Bet = () => {
             </>
         )
     }
-    else if (isBet === false) {
+    else if (isBet === false && money > 0) {
         return (
             <MoneyBet onBetAccept={() => {
                 setIsBet(true);
             }} />
+        )
+    }
+    else if (isBet === false && money === 0) {
+        return (
+            <h1> Nie masz już funduszy do daleszej gry</h1>
         )
     }
 }
