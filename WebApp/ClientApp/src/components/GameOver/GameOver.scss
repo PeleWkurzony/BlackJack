@@ -20,21 +20,20 @@ $light-green: #8BC34A; /* Lighter green for accents */
 }
 
 h1 {
-    font-size: 4em; /* Larger font size for 'Game Over' */
+    font-size: 4.5em; /* Slightly larger font size for 'Game Over' */
     margin-bottom: 20px;
     margin-top: 0; /* Remove top margin for 'Game Over' */
 }
 
-
 p {
-    font-size: 1.5em;
+    font-size: 1.8em; /* Slightly larger font size for paragraph */
     margin-bottom: 20px;
 }
 
 /* Styling for the restart button */
 #restart-btn {
-    padding: 15px 30px;
-    font-size: 1.2em;
+    padding: 18px 36px; /* Increase padding for button */
+    font-size: 1.4em; /* Slightly larger font size for button text */
     background-color: $red; /* Red button background */
     color: white;
     border: none;
