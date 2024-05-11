@@ -11,9 +11,6 @@ export const GameOver = () => {
                     <p>Your score: 18</p>
                     <button id="restart-btn">Start Again</button>
                 </section>
-                <footer>
-                    <p>&copy; 2024 Blackjack Game</p>
-                </footer>
             </div>
         </>
     )
