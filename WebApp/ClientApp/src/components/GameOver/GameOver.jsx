@@ -1,14 +1,20 @@
 ﻿import './GameOver.scss'
+import { useDispatch } from "react-redux";
+import { changeMoney } from "../Context/ProfileSlice";
 
 
 export const GameOver = () => {
     
+    const dispatch = useDispatch();
+    
     return (
         <>
-            <div class="game-container">
-                <section class="game-section">
+            <div className="game-container">
+                <section className="game-section">
                     <h1>Game Over</h1>
-                    <button id="restart-btn">Start Again</button>
+                    <button id="restart-btn" onClick={() => {
+                        dispatch(changeMoney(100));
+                    }}>Start Again</button>
                 </section>
 
             </div>
