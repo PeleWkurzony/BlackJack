@@ -54,31 +54,32 @@ body {
     position: fixed;
     width: 5%;
     height: 7%;
-    border-radius: 60%; /* ¯eton zaokr¹glony */
+    border-radius: 60%; /* Rounded token */
     z-index: 1;
-    // Animacja spadania
-    // Losowe opóŸnienie dla animacji
+    /* Animation for falling */
+    /* Random delay for animation */
 }
 
 .left3 {
-    left: 7%; /* Pocz¹tkowa pozycja lewego ¿etonu */
+    left: 7%; /* Initial position of left token */
     animation: fall 2.5s linear infinite, rotate-down 2.5s linear infinite;
 }
 
 .right3 {
-    right: 7%; /* Pocz¹tkowa pozycja prawego ¿etonu */
+    right: 7%; /* Initial position of right token */
     animation: fall 2.5s linear infinite, rotate-down 2.5s linear infinite;
 }
 
 .left4 {
-    left: 3%; /* Pocz¹tkowa pozycja lewego ¿etonu */
+    left: 3%; /* Initial position of left token */
     animation: fall 3.2s linear infinite, rotate-down 3.2s linear infinite;
 }
 
 .right4 {
-    right: 3%; /* Pocz¹tkowa pozycja prawego ¿etonu */
+    right: 3%; /* Initial position of right token */
     animation: fall 3.2s linear infinite, rotate-down 3.2s linear infinite;
 }
+
 
 @keyframes fall {
     0% {
