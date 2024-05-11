@@ -48,18 +48,29 @@ export const MoneyBet = ({ onBetAccept }) => {
         <div id="bet-money-container">
             <p id="bet-money-title"> Ile chcesz postawić? </p>
 
-            <input id="bet-money-input" type="number" value={betAmmount} step="1" min={0} onChange={(e) => { setBetAmmount(e.target.valueAsNumber) }} />
+            <div className="container row justify-content-center">
+                <input className="col-11" id="bet-money-input" type="number" value={betAmmount} step="1" min={0}
+                       onChange={(e) => {
+                           setBetAmmount(e.target.valueAsNumber)
+                       }}/>
+                <button id="bet-money-all-in" className="col-1 btn btn-primary mb-2 mx-2 px-0" onClick={() => {
+                    setBetAmmount(money);
+                }}>
+                    All in
+                </button>
+            </div>
 
-            <button id="bet-money-accept" onClick={() => { 
+            <button className="bet-money-accept" onClick={() => {
                 setupBet();
                 dispatch(setGameStarted(true));
                 const audio = document.querySelector('#background-music');
                 if (audio) {
                     audio.play();
                 }
-            }} >
+            }}>
                 Akceptuję
             </button>
+
             {wrongBet ?
                 <span id="bet-money-wrong-bet"> Nie masz takiej ilości pieniędzy! </span> :
                 <></>

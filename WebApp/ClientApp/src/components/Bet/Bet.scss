@@ -22,7 +22,7 @@
     border-radius: 5px;
 }
 
-#bet-money-accept {
+.bet-money-accept {
     background-color: #007BFF;
     color: #fff;
     font-size: 20px;
@@ -53,6 +53,24 @@
     100% {
         opacity: 1;
     }
+}
+
+.bet-options-button {
+    background-color: #007BFF;
+    color: #fff;
+    font-size: 20px;
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    animation: pulse 2s infinite alternate; /* Dodajemy animacjê pulsowania */
+}
+
+.bet-options-button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700, 0 0 30px #ffd700, 0 0 40px #ffd700; /* Dodajemy efekt rozmycia */
 }
 
 #game-managerbox {
