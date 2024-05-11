@@ -50,3 +50,40 @@ p {
     font-size: 1.2em;
     margin-bottom: 20px;
 }
+/* Styling for the restart button */
+#restart-btn {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: $red; /* Red button background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: darken($red, 10%); /* Darken red color on hover */
+    }
+}
+
+/* Styling for the footer */
+footer {
+    text-align: center;
+    font-size: 0.8em;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animation for the game section */
+.game-section {
+    animation: fadeIn 0.5s ease-in-out;
+}
