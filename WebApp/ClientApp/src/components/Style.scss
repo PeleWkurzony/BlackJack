@@ -1,52 +1,52 @@
 body {
-    background-color: #0d730d; 
+    background-color: #0d730d;
     width: 100%;
     height: 100%;
     justify-content: center;
     align-items: center;
     font-family: Arial, sans-serif;
-
-    
 }
+
+/* Test comment */
+
 #croupierImg {
     width: 15%;
     height: 10%;
 }
 
-#croupier{
-    text-align:center;
+#croupier {
+    text-align: center;
 }
 
-// Mixin generuj¹cy losowy czas opóŸnienia w sekundach
+/* Mixin generating random delay time in seconds */
 
 
 #token-fall {
     position: fixed;
     width: 5%;
     height: 5%;
-
-    border-radius: 50%; /* ¯eton zaokr¹glony */
+    border-radius: 50%; /* Rounded token */
     z-index: 1;
 }
 
 .left {
-    left: 5%; /* Pocz¹tkowa pozycja lewego ¿etonu */
+    left: 5%; /* Initial position of left token */
     animation: fall 2s linear infinite, rotate-down 2s linear infinite;
 }
 
 
 .right {
-    right: 5%; /* Pocz¹tkowa pozycja prawego ¿etonu */
+    right: 5%; /* Initial position of right token */
     animation: fall 2s linear infinite, rotate-down 2s linear infinite;
 }
 
 .left2 {
-    left: 10%; /* Pocz¹tkowa pozycja lewego ¿etonu */
+    left: 10%; /* Initial position of left token */
     animation: fall 3s linear infinite, rotate-down 3s linear infinite;
 }
 
 .right2 {
-    right: 10%; /* Pocz¹tkowa pozycja prawego ¿etonu */
+    right: 10%; /* Initial position of right token */
     animation: fall 3s linear infinite, rotate-down 3s linear infinite;
 }
 
@@ -54,73 +54,74 @@ body {
     position: fixed;
     width: 5%;
     height: 7%;
-    border-radius: 60%; /* ¯eton zaokr¹glony */
+    border-radius: 60%; /* Rounded token */
     z-index: 1;
-    // Animacja spadania
-    // Losowe opóŸnienie dla animacji
+    /* Animation for falling */
+    /* Random delay for animation */
 }
 
 .left3 {
-    left: 7%; /* Pocz¹tkowa pozycja lewego ¿etonu */
+    left: 7%; /* Initial position of left token */
     animation: fall 2.5s linear infinite, rotate-down 2.5s linear infinite;
 }
 
 .right3 {
-    right: 7%; /* Pocz¹tkowa pozycja prawego ¿etonu */
+    right: 7%; /* Initial position of right token */
     animation: fall 2.5s linear infinite, rotate-down 2.5s linear infinite;
 }
 
 .left4 {
-    left: 3%; /* Pocz¹tkowa pozycja lewego ¿etonu */
+    left: 3%; /* Initial position of left token */
     animation: fall 3.2s linear infinite, rotate-down 3.2s linear infinite;
 }
 
 .right4 {
-    right: 3%; /* Pocz¹tkowa pozycja prawego ¿etonu */
+    right: 3%; /* Initial position of right token */
     animation: fall 3.2s linear infinite, rotate-down 3.2s linear infinite;
 }
 
+
 @keyframes fall {
     0% {
-        transform: translateY(-50px); /* Pocz¹tkowa pozycja spadania */
+        transform: translateY(-50px); /* Starting falling position */
     }
 
     100% {
-        transform: translateY(100vh); /* Koñcowa pozycja spadania (do koñca ekranu) */
+        transform: translateY(100vh); /* Ending falling position (to the bottom of the screen) */
     }
 }
+
 @keyframes rotate-down {
     0% {
-        transform: translateY(-50px) rotate(0deg); /* Pocz¹tkowa pozycja spadania i brak obrotu */
+        transform: translateY(-50px) rotate(0deg); /* Starting falling position with no rotation */
     }
 
     100% {
-        transform: translateY(100vh) rotate(180deg); /* Koñcowa pozycja spadania i obrót o 180 stopni w dó³ */
+        transform: translateY(100vh) rotate(180deg); /* Ending falling position with 180-degree rotation downwards */
     }
 }
 
 
 
 
-/* Omijanie nav-menu */
+/* Skipping nav-menu */
 #nav-menu {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000; /* Nav-menu powinien byæ nad ¿etonami */
+    z-index: 1000; /* Nav-menu should be above tokens */
 }
 
-/* Ustawienie ró¿nych opóŸnieñ animacji */
+/* Setting different animation delays */
 .token-fall:nth-child(1) {
-    animation-delay: 0s; /* Brak opóŸnienia dla pierwszego ¿etonu */
+    animation-delay: 0s; /* No delay for the first token */
 }
 
 .token-fall:nth-child(2) {
-    animation-delay: 0.5s; /* OpóŸnienie 0.5 sekundy dla drugiego ¿etonu */
+    animation-delay: 0.5s; /* 0.5-second delay for the second token */
 }
 
 .token-fall:nth-child(3) {
-    animation-delay: 1s; /* OpóŸnienie 1 sekunda dla trzeciego ¿etonu */
+    animation-delay: 1s; /* 1-second delay for the third token */
 }
-
