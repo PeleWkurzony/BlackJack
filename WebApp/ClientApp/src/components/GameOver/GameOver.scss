@@ -11,3 +11,15 @@ html, body {
     font-family: Arial, sans-serif;
     height: 100%;
 }
+/* Styling for the game container */
+.game-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    background-color: $dark-green; /* Set darker green background */
+    color: white; /* Text color white */
+    padding: 20px;
+    box-sizing: border-box;
+}
