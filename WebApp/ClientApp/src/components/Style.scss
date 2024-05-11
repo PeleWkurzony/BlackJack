@@ -83,20 +83,21 @@ body {
 
 @keyframes fall {
     0% {
-        transform: translateY(-50px); /* Pocz¹tkowa pozycja spadania */
+        transform: translateY(-50px); /* Starting falling position */
     }
 
     100% {
-        transform: translateY(100vh); /* Koñcowa pozycja spadania (do koñca ekranu) */
+        transform: translateY(100vh); /* Ending falling position (to the bottom of the screen) */
     }
 }
+
 @keyframes rotate-down {
     0% {
-        transform: translateY(-50px) rotate(0deg); /* Pocz¹tkowa pozycja spadania i brak obrotu */
+        transform: translateY(-50px) rotate(0deg); /* Starting falling position with no rotation */
     }
 
     100% {
-        transform: translateY(100vh) rotate(180deg); /* Koñcowa pozycja spadania i obrót o 180 stopni w dó³ */
+        transform: translateY(100vh) rotate(180deg); /* Ending falling position with 180-degree rotation downwards */
     }
 }
 
