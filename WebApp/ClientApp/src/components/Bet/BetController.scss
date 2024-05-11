@@ -20,9 +20,10 @@ button {
     animation: pulse 2s infinite alternate; /* Adding pulse animation */
 }
 
+/* Hover effect for buttons */
 button:hover {
     background-color: #0056b3;
-    box-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700, 0 0 30px #ffd700, 0 0 40px #ffd700; /* Dodajemy efekt rozmycia */
+    box-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700, 0 0 30px #ffd700, 0 0 40px #ffd700; /* Adding blur effect */
 }
 
 @keyframes pulse {
