@@ -3,3 +3,11 @@ $green: #4CAF50; /* Main green color */
 $red: #FF5252; /* Main red color */
 $dark-green: #388E3C; /* Darker green for background */
 $light-green: #8BC34A; /* Lighter green for accents */
+
+/* Reset styles and basic setup */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+}
