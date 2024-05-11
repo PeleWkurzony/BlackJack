@@ -104,25 +104,24 @@ body {
 
 
 
-/* Omijanie nav-menu */
+/* Skipping nav-menu */
 #nav-menu {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000; /* Nav-menu powinien byæ nad ¿etonami */
+    z-index: 1000; /* Nav-menu should be above tokens */
 }
 
-/* Ustawienie ró¿nych opóŸnieñ animacji */
+/* Setting different animation delays */
 .token-fall:nth-child(1) {
-    animation-delay: 0s; /* Brak opóŸnienia dla pierwszego ¿etonu */
+    animation-delay: 0s; /* No delay for the first token */
 }
 
 .token-fall:nth-child(2) {
-    animation-delay: 0.5s; /* OpóŸnienie 0.5 sekundy dla drugiego ¿etonu */
+    animation-delay: 0.5s; /* 0.5-second delay for the second token */
 }
 
 .token-fall:nth-child(3) {
-    animation-delay: 1s; /* OpóŸnienie 1 sekunda dla trzeciego ¿etonu */
+    animation-delay: 1s; /* 1-second delay for the third token */
 }
-
