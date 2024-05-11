@@ -1,3 +1,4 @@
+/* Container for the bet money section */
 #bet-money-container {
     display: flex;
     flex-direction: column;
@@ -6,12 +7,14 @@
     margin-top: 20px;
 }
 
+/* Title for the bet money section */
 #bet-money-title {
     font-size: 30px;
     margin-bottom: 10px;
-    font-weight:bold;
+    font-weight: bold;
 }
 
+/* Input field for entering bet amount */
 #bet-money-input {
     width: 200px;
     height: 40px;
@@ -22,6 +25,7 @@
     border-radius: 5px;
 }
 
+/* Button to accept the bet */
 #bet-money-accept {
     background-color: #007BFF;
     color: #fff;
