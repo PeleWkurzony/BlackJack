@@ -41,12 +41,12 @@ body {
 }
 
 .left2 {
-    left: 10%; /* Pocz¹tkowa pozycja lewego ¿etonu */
+    left: 10%; /* Initial position of left token */
     animation: fall 3s linear infinite, rotate-down 3s linear infinite;
 }
 
 .right2 {
-    right: 10%; /* Pocz¹tkowa pozycja prawego ¿etonu */
+    right: 10%; /* Initial position of right token */
     animation: fall 3s linear infinite, rotate-down 3s linear infinite;
 }
 
