@@ -1,0 +1,47 @@
+/* Global settings */
+$green: #4CAF50; /* Main green color */
+$red: #FF5252; /* Main red color */
+$light-green: #8BC34A; /* Lighter green for accents */
+
+/* Styling for the game container */
+.game-container {
+    height: 100vh;
+    color: white; /* Text color white */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling for the game section */
+.game-section {
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center; /* Center-align text inside game-section */
+}
+
+h1 {
+    font-size: 4.5em; /* Slightly larger font size for 'Game Over' */
+    margin-bottom: 20px;
+    margin-top: 0; /* Remove top margin for 'Game Over' */
+}
+
+p {
+    font-size: 1.8em; /* Slightly larger font size for paragraph */
+    margin-bottom: 20px;
+}
+
+/* Styling for the restart button */
+#restart-btn {
+    padding: 18px 36px; /* Increase padding for button */
+    font-size: 1.4em; /* Slightly larger font size for button text */
+    background-color: $red; /* Red button background */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: darken($red, 10%); /* Darken red color on hover */
+    }
+}

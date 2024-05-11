@@ -11,6 +11,7 @@ import { setCanSplit, setCanDouble, setCanInsurance, resetActions } from "../Con
 import { setInsuranceMoney } from "../Context/ProfileSlice";
 import { calculateCardPoints } from "../Cards/CardsPoints";
 import { EndGameComponent } from "./EndGameComponent";
+import { GameOver } from "../GameOver/GameOver";
 
 /**
  * Represents a component managing the betting process.
@@ -115,7 +116,7 @@ export const Bet = () => {
     }
     else if (isBet === false && money === 0) {
         return (
-            <h1> Nie masz już funduszy do daleszej gry</h1>
+            <GameOver />
         )
     }
 }
