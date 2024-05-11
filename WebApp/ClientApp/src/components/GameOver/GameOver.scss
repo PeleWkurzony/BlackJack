@@ -11,53 +11,44 @@ html, body {
     font-family: Arial, sans-serif;
     height: 100%;
 }
+
 /* Styling for the game container */
 .game-container {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     height: 100vh;
     background-color: $dark-green; /* Set darker green background */
     color: white; /* Text color white */
-    padding: 20px;
-    box-sizing: border-box;
-}
-/* Styling for the header */
-header {
-    text-align: center;
-    margin-bottom: 20px;
 }
 
-h1 {
-    font-size: 3em;
-}
 /* Styling for the game section */
 .game-section {
     text-align: center;
     background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
-    padding: 20px;
+    padding: 50px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
 }
 
-h2 {
-    font-size: 2em;
-    margin-bottom: 10px;
+h1 {
+    font-size: 4em; /* Larger font size for 'Game Over' */
+    margin-bottom: 20px;
 }
 
 p {
-    font-size: 1.2em;
+    font-size: 1.5em;
     margin-bottom: 20px;
 }
+
 /* Styling for the restart button */
 #restart-btn {
-    padding: 10px 20px;
-    font-size: 1em;
+    padding: 15px 30px;
+    font-size: 1.2em;
     background-color: $red; /* Red button background */
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 
@@ -70,20 +61,4 @@ p {
 footer {
     text-align: center;
     font-size: 0.8em;
-}
-
-/* Animation */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-/* Animation for the game section */
-.game-section {
-    animation: fadeIn 0.5s ease-in-out;
 }
