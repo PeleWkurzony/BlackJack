@@ -1,4 +1,4 @@
-﻿
+﻿/* Container for bet options */
 #bet-options {
     display: flex;
     text-align: center;
@@ -6,22 +6,24 @@
     margin-left: 20%;
     width: 100%;
 }
+/* Styling for all buttons */
 button {
     background-color: #007BFF;
     color: #fff;
     font-size: 20px;
-    margin:10px;
+    margin: 10px;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    animation: pulse 2s infinite alternate; /* Dodajemy animację pulsowania */
+    animation: pulse 2s infinite alternate; /* Adding pulse animation */
 }
 
+/* Hover effect for buttons */
 button:hover {
     background-color: #0056b3;
-    box-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700, 0 0 30px #ffd700, 0 0 40px #ffd700; /* Dodajemy efekt rozmycia */
+    box-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700, 0 0 30px #ffd700, 0 0 40px #ffd700; /* Adding blur effect */
 }
 
 @keyframes pulse {

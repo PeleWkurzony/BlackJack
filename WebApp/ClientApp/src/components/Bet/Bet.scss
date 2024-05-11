@@ -1,3 +1,4 @@
+/* Container for the bet money section */
 #bet-money-container {
     display: flex;
     flex-direction: column;
@@ -6,12 +7,14 @@
     margin-top: 20px;
 }
 
+/* Title for the bet money section */
 #bet-money-title {
     font-size: 30px;
     margin-bottom: 10px;
-    font-weight:bold;
+    font-weight: bold;
 }
 
+/* Input field for entering bet amount */
 #bet-money-input {
     width: 200px;
     height: 40px;
@@ -22,6 +25,7 @@
     border-radius: 5px;
 }
 
+/* Button to accept the bet */
 #bet-money-accept {
     background-color: #007BFF;
     color: #fff;
@@ -33,18 +37,20 @@
     transition: background-color 0.3s ease-in-out;
 }
 
+/* Hover effect for the accept button */
 #bet-money-accept:hover {
     background-color: #0056b3;
 }
 
-
+/* Message for indicating incorrect bet */
 #bet-money-wrong-bet {
     color: #b81414;
     font-size: 18px;
     margin-top: 10px;
-    animation: flicker 1s infinite alternate; /* Dodajemy animacjê migotania */
+    animation: flicker 1s infinite alternate; /* Adding flicker animation */
 }
 
+/* Keyframes for the flicker animation */
 @keyframes flicker {
     0% {
         opacity: 0.5;
@@ -55,8 +61,9 @@
     }
 }
 
+/* Styling for the game manager box */
 #game-managerbox {
-    margin-top:2%;
-    margin-right:40%;
-    float:right;
+    margin-top: 2%;
+    margin-right: 40%;
+    float: right;
 }
