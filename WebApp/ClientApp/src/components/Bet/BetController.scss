@@ -18,6 +18,7 @@
     transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     animation: pulse 2s infinite alternate; /* Dodajemy animację pulsowania */
 }
+
 .bet-money-accept:hover {
     background-color: #0056b3;
     box-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700, 0 0 30px #ffd700, 0 0 40px #ffd700; /* Dodajemy efekt rozmycia */
