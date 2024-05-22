@@ -49,4 +49,10 @@
       </ResolvedFileToPublish>
     </ItemGroup>
   </Target>
+
+  <Target Name="RunTests" BeforeTargets="Build" Condition="'$(RunTests)' == 'true'">
+    <!-- Run tests before building the project -->
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm test" />
+  </Target>
+
 </Project>

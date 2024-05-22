@@ -38,7 +38,7 @@
     "@types/react": "^18.2.56",
     "ajv": "^8.12.0",
     "cross-env": "^7.0.3",
-    "eslint": "^8.39.0",
+    "eslint": "^8.57.0",
     "eslint-config-react-app": "^7.0.1",
     "eslint-plugin-flowtype": "^8.0.3",
     "eslint-plugin-import": "^2.27.5",
@@ -58,7 +58,8 @@
     "build": "react-scripts build",
     "test": "cross-env CI=true react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "lint": "eslint ./src/"
+    "lint": "eslint ./src/",
+    "test": "jest"
   },
   "eslintConfig": {
     "extends": [
