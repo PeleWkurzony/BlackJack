@@ -95,5 +95,5 @@ describe('GameManager component', () => {
         expect(actions).toContainEqual(setCanInsurance(true));
     });
 
-    // Dodaj wiêcej testów dla innych przypadków logiki gry tutaj...
+    
 });
