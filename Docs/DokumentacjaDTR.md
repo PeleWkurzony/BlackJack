@@ -1,47 +1,57 @@
-## Zawartoœæ g³ównego folderu ClientApp:
+# Dokumentacja DTR
 
+## Spis treÅ›ci:
+1. Foldery z mediami
+2. Folder "src"
+3. Folder components
+4. Folder Bet
+5. Folder Cards
+6. Folder Context
+7. Folder Game
+8. Folder GameOver
+9. Folder Home
+10. Folder NavMenu
+
+## ZawartoÅ›Ä‡ gÅ‚Ã³wnego folderu ClientApp:
 
  ![Alt text](./DokumentacjaDTR/Foldery.png)
 
-
-
-### 1. Foldery z mediami:
+### 1. Foldery z mediami
 
  ![Alt text](./DokumentacjaDTR/FolderMedia.png)
 
-- "**Cards**” zawiera zdjêcia kart które s¹ wyœwietlane w grze.
+- "**Cards**â€ zawiera zdjÄ™cia kart ktÃ³re sÄ… wyÅ›wietlane w grze.
 
-- "**Others**” zawiera pliki mp3 oraz zdjêcie krupiera i ¿etonów.
+- "**Others**â€ zawiera pliki mp3 oraz zdjÄ™cie krupiera i Å¼etonÃ³w.
 
-### 2. Folder „src” 
-
+### 2. Folder â€srcâ€ 
  ![Alt text](./DokumentacjaDTR/FolderSrc.png)
 
-Zawiera pliki Ÿród³owe aplikacji, które s¹ niezbêdne do jej uruchomienia i dzia³ania. 
-W jego wnêtrzu znajduj¹ siê takie pliki jak: 
+Zawiera pliki ÅºrÃ³dÅ‚owe aplikacji, ktÃ³re sÄ… niezbÄ™dne do jej uruchomienia i dziaÅ‚ania. 
+W jego wnÄ™trzu znajdujÄ… siÄ™ takie pliki jak: 
 
-- "**App.js**” - jest g³ównym komponentem aplikacji React, który definiuje strukturê tras i renderuje g³ówny layout, w tym wszystkie komponenty aplikacji, zgodnie z konfiguracj¹ tras z pliku AppRoutes.js.
+- "**App.js**â€ - jest gÅ‚Ã³wnym komponentem aplikacji React, ktÃ³ry definiuje strukturÄ™ tras i renderuje gÅ‚Ã³wny layout, w tym wszystkie komponenty aplikacji, zgodnie z konfiguracjÄ… tras z pliku AppRoutes.js.
 
-- "**AppRoutes.js**” - zawiera konfiguracjê tras dla aplikacji, gdzie ka¿da trasa jest reprezentowana jako obiekt. Obecnie zdefiniowana jest tylko jedna trasa dla g³ównej strony domowej, której elementem jest komponent Home. Pozosta³e trasy zosta³y zakomentowane.
+- "**AppRoutes.js**â€ - zawiera konfiguracjÄ™ tras dla aplikacji, gdzie kaÅ¼da trasa jest reprezentowana jako obiekt. Obecnie zdefiniowana jest tylko jedna trasa dla gÅ‚Ã³wnej strony domowej, ktÃ³rej elementem jest komponent Home. PozostaÅ‚e trasy zostaÅ‚y zakomentowane.
 
-- "**custom.css**” - definiuje niestandardowe style CSS dla „App.js”
+- "**custom.css**â€ - definiuje niestandardowe style CSS dla â€App.jsâ€
 
-- "**index.js**” - jest plikiem g³ównym aplikacji React. Renderuje korzeñ aplikacji w elemencie o id "root", u¿ywaj¹c przegl¹darki routingu do zarz¹dzania trasami, rejestruje serwis pracownika (Service Worker) do obs³ugi funkcji PWA i raportowania wskaŸników internetowych.
+- "**index.js**â€ - jest plikiem gÅ‚Ã³wnym aplikacji React. Renderuje korzeÅ„ aplikacji w elemencie o id "root", uÅ¼ywajÄ…c przeglÄ…darki routingu do zarzÄ…dzania trasami, rejestruje serwis pracownika (Service Worker) do obsÅ‚ugi funkcji PWA i raportowania wskaÅºnikÃ³w internetowych.
 
-### 3. Folder „components” 
+### 3. Folder â€componentsâ€ 
 
  ![Alt text](./DokumentacjaDTR/FolderComponents.png)
 
-Zawiera zestaw komponentów, które s¹ u¿ywane w aplikacji do budowania ró¿nych widoków i funkcjonalnoœci.
-W jego wnêtrzu znajduj¹ siê takie pliki jak:
+Zawiera zestaw komponentÃ³w, ktÃ³re sÄ… uÅ¼ywane w aplikacji do budowania rÃ³Å¼nych widokÃ³w i funkcjonalnoÅ›ci.
+W jego wnÄ™trzu znajdujÄ… siÄ™ takie pliki jak:
 
-- "**Home.js**" zawiera g³ówny komponent reprezentuj¹cy ekran g³ówny gry.
+- "**Home.js**" zawiera gÅ‚Ã³wny komponent reprezentujÄ…cy ekran gÅ‚Ã³wny gry.
 
-- "**Layout.js**" odpowiada za definiowanie ogólnego uk³adu aplikacji i zapewnienie dostêpu do magazynu Redux dla wszystkich komponentów podrzêdnych.
+- "**Layout.js**" odpowiada za definiowanie ogÃ³lnego ukÅ‚adu aplikacji i zapewnienie dostÄ™pu do magazynu Redux dla wszystkich komponentÃ³w podrzÄ™dnych.
 
-- "**NavMenu-old.js**" definiuje menu nawigacyjne aplikacji i obs³uguje jego interakcje, takie jak rozwijanie i zwijanie, oraz definiuje odnoœniki do ró¿nych czêœci aplikacji.
+- "**NavMenu-old.js**" definiuje menu nawigacyjne aplikacji i obsÅ‚uguje jego interakcje, takie jak rozwijanie i zwijanie, oraz definiuje odnoÅ›niki do rÃ³Å¼nych czÄ™Å›ci aplikacji.
 
-- "**Style.scss**" okreœla styl dla menu nawigacyjnego oraz strony g³ównej
+- "**Style.scss**" okreÅ›la styl dla menu nawigacyjnego oraz strony gÅ‚Ã³wnej
 
 - Foldery: "Bet", "Cards", "Context", "Game", "GameOver", "Home", "NavMenu"
 
@@ -50,100 +60,100 @@ W jego wnêtrzu znajduj¹ siê takie pliki jak:
 
  ![Alt text](./DokumentacjaDTR/FolderBet.png)
  
-W folderze "Bet" znajduj¹ siê pliki zwi¹zane ze stawianiem zak³adu.
+W folderze "Bet" znajdujÄ… siÄ™ pliki zwiÄ…zane ze stawianiem zakÅ‚adu.
 
  ![Alt text](./DokumentacjaDTR/ShowBet.png)
 
   ![Alt text](./DokumentacjaDTR/ShowBet2.png)
 
-- "**Bet.js**" zawiera komponent zarz¹dzaj¹cy procesem obstawiania zak³adów.
+- "**Bet.js**" zawiera komponent zarzÄ…dzajÄ…cy procesem obstawiania zakÅ‚adÃ³w.
 
-- "**Bet.scss**" zawiera stylowanie komponentów odpowiedzialnych za stawianie zak³adu.
+- "**Bet.scss**" zawiera stylowanie komponentÃ³w odpowiedzialnych za stawianie zakÅ‚adu.
 
-- "**BetController.jsx**"  zawiera komponent odpowiedzialny za kontrolê akcji podczas rozgrywki. Takich jak: Dobranie karty, podwojenie zak³adu i pasowanie. 
+- "**BetController.jsx**"  zawiera komponent odpowiedzialny za kontrolÄ™ akcji podczas rozgrywki. Takich jak: Dobranie karty, podwojenie zakÅ‚adu i pasowanie. 
 
-- "**BetController.scss**" zawiera stylowanie komponentów odpowiedzialnych za kontrolê akcji podczas rozgrywki
+- "**BetController.scss**" zawiera stylowanie komponentÃ³w odpowiedzialnych za kontrolÄ™ akcji podczas rozgrywki
 
-- "**EndGameComponent.jsx**" zawiera komponent odpowiedzialny za wyœwietlanie informacji o zakoñczeniu gry oraz umo¿liwia u¿ytkownikowi uruchomienie nowej gry.
+- "**EndGameComponent.jsx**" zawiera komponent odpowiedzialny za wyÅ›wietlanie informacji o zakoÅ„czeniu gry oraz umoÅ¼liwia uÅ¼ytkownikowi uruchomienie nowej gry.
 
-- "**MoneyBet.jsx**" zawiera komponent odpowiedzialny za umo¿liwienie u¿ytkownikowi postawienia zak³adu o okreœlonej kwocie pieniêdzy. 
+- "**MoneyBet.jsx**" zawiera komponent odpowiedzialny za umoÅ¼liwienie uÅ¼ytkownikowi postawienia zakÅ‚adu o okreÅ›lonej kwocie pieniÄ™dzy. 
 
 ### 5. Folder "Cards"
 
  ![Alt text](./DokumentacjaDTR/FolderCards.png)
 
-W folderze "Cards" znajduj¹ siê pliki zwi¹zane z renderowaniem kart i liczeniem punktów.
+W folderze "Cards" znajdujÄ… siÄ™ pliki zwiÄ…zane z renderowaniem kart i liczeniem punktÃ³w.
 
 - "**CardComponent.jsx**" zawiera komponent odpowiedzialny za renderowanie pojedynczej karty do gry.
 
-- "**CardPoints.js**" oraz "**CardPoints.ts**" zawiera komponent odpowiedzialny za liczenie punktów z kart
+- "**CardPoints.js**" oraz "**CardPoints.ts**" zawiera komponent odpowiedzialny za liczenie punktÃ³w z kart
 
 ### 6. Folder "Context"
 
  ![Alt text](./DokumentacjaDTR/FolderContextt.png)
 
-W folderze "Context" znajduj¹ siê pliki zwi¹zane z zarz¹dzaniem stanem aplikacji.
+W folderze "Context" znajdujÄ… siÄ™ pliki zwiÄ…zane z zarzÄ…dzaniem stanem aplikacji.
 
-- "**CardSlice.js**" - Plik zawieraj¹cy reduktor i akcje zwi¹zane z zarz¹dzaniem stanem kart w grze, takie jak dodawanie kart do rêki gracza i krupiera, resetowanie kart itp.
+- "**CardSlice.js**" - Plik zawierajÄ…cy reduktor i akcje zwiÄ…zane z zarzÄ…dzaniem stanem kart w grze, takie jak dodawanie kart do rÄ™ki gracza i krupiera, resetowanie kart itp.
 
-- "**GameManageSlice.js**" - Plik zawieraj¹cy reduktor i akcje zwi¹zane z zarz¹dzaniem stanem gry, takie jak rozpoczêcie i zakoñczenie gry, okreœlenie zwyciêzcy itp.
+- "**GameManageSlice.js**" - Plik zawierajÄ…cy reduktor i akcje zwiÄ…zane z zarzÄ…dzaniem stanem gry, takie jak rozpoczÄ™cie i zakoÅ„czenie gry, okreÅ›lenie zwyciÄ™zcy itp.
 
-- "**ProfileSlice.js**" - Plik zawieraj¹cy reduktor i akcje zwi¹zane z zarz¹dzaniem profilem gracza, takie jak zmiana iloœci pieniêdzy, ustalanie zak³adu itp.
+- "**ProfileSlice.js**" - Plik zawierajÄ…cy reduktor i akcje zwiÄ…zane z zarzÄ…dzaniem profilem gracza, takie jak zmiana iloÅ›ci pieniÄ™dzy, ustalanie zakÅ‚adu itp.
 
-- "**ActionsContext.js**" - Plik zawieraj¹cy kontekst React do zarz¹dzania dostêpnymi akcjami w grze, takimi jak podwojenie, rozdwojenie itp.
+- "**ActionsContext.js**" - Plik zawierajÄ…cy kontekst React do zarzÄ…dzania dostÄ™pnymi akcjami w grze, takimi jak podwojenie, rozdwojenie itp.
 
 ### 7. Folder "Game"
 
  ![Alt text](./DokumentacjaDTR/FolderGame.png)
 
-W folderze "Game" znajduj¹ siê pliki zwi¹zane z logik¹ gry, zarz¹dzaniem kartami i rozgrywk¹.
+W folderze "Game" znajdujÄ… siÄ™ pliki zwiÄ…zane z logikÄ… gry, zarzÄ…dzaniem kartami i rozgrywkÄ….
 
  ![Alt text](./DokumentacjaDTR/ShowGameManager.png)
 
-- "**GameManager.jsx**" - Plik zawieraj¹cy g³ówny komponent zarz¹dzaj¹cy logik¹ gry, tak¹ jak rozdawanie kart, ustalanie wyniku itp.
+- "**GameManager.jsx**" - Plik zawierajÄ…cy gÅ‚Ã³wny komponent zarzÄ…dzajÄ…cy logikÄ… gry, takÄ… jak rozdawanie kart, ustalanie wyniku itp.
 
-- "**GameManager.scss**" - zawiera stylowanie generowanych kart oraz liczników punktów.
+- "**GameManager.scss**" - zawiera stylowanie generowanych kart oraz licznikÃ³w punktÃ³w.
 
-- "**RandomCard.js**" - Plik zawieraj¹cy funkcjê generuj¹c¹ losow¹ kartê.
+- "**RandomCard.js**" - Plik zawierajÄ…cy funkcjÄ™ generujÄ…cÄ… losowÄ… kartÄ™.
 
 ### 8. Folder "GameOver"
 
  ![Alt text](./DokumentacjaDTR/FolderGameOver.png)
 
 
-W folderze "GameOver" znajduj¹ siê pliki zwi¹zane z ekranem koñca gry.
+W folderze "GameOver" znajdujÄ… siÄ™ pliki zwiÄ…zane z ekranem koÅ„ca gry.
 
  ![Alt text](./DokumentacjaDTR/ShowGameOver.png)
 
-- "**GameOver.jsx**" - Plik zawieraj¹cy komponent wyœwietlaj¹cy ekran koñca gry, informuj¹cy gracza o wyniku i umo¿liwiaj¹cy rozpoczêcie nowej gry.
+- "**GameOver.jsx**" - Plik zawierajÄ…cy komponent wyÅ›wietlajÄ…cy ekran koÅ„ca gry, informujÄ…cy gracza o wyniku i umoÅ¼liwiajÄ…cy rozpoczÄ™cie nowej gry.
 
-- "**Game Over.scss**" - zawiera stylowanie ekranu koñca gry.
+- "**Game Over.scss**" - zawiera stylowanie ekranu koÅ„ca gry.
 
 ### 9. Folder "Home"
 
  ![Alt text](./DokumentacjaDTR/FolderHome.png)
 
-W folderze "Home" znajduj¹ siê pliki zwi¹zane z ekranem g³ównym gry.
+W folderze "Home" znajdujÄ… siÄ™ pliki zwiÄ…zane z ekranem gÅ‚Ã³wnym gry.
 
  ![Alt text](./DokumentacjaDTR/ShowCroupier.png)
  ![Alt text](./DokumentacjaDTR/ShowFall.png)
 
-- "**BackgroundMusic.jsx**" - zawiera komponent ekranu odpowiedzialny za muzykê w tle.
+- "**BackgroundMusic.jsx**" - zawiera komponent ekranu odpowiedzialny za muzykÄ™ w tle.
 
-- "**Croupier.jsx**" - zawiera komponent odpowiedzialny za pojawienie sie krupiera oraz spadaj¹cych ¿etonów.
+- "**Croupier.jsx**" - zawiera komponent odpowiedzialny za pojawienie sie krupiera oraz spadajÄ…cych Å¼etonÃ³w.
 
 ### 10. Folder "NavMenu"
 
  ![Alt text](./DokumentacjaDTR/FolderNavMenu.png)
 
-W folderze "NavMenu" znajduj¹ siê pliki zwi¹zane z menu nawigacyjnym aplikacji:
+W folderze "NavMenu" znajdujÄ… siÄ™ pliki zwiÄ…zane z menu nawigacyjnym aplikacji:
 
   ![Alt text](./DokumentacjaDTR/ShowNavMenu.png)
 
-- "**MoneyComponent.js**" - odpowiada za utworzenie ikonki pieniêdzy. 
-- "**NavMenu.js**" - odpowiada za zawartoœæ menu nag³ówkowego na górze ekranu.
-- "**NavMenu.scss**" - zawiera stylowanie menu nag³ówkowego na górze ekranu.
-- "**SettingsComponent.js**" - odpowiada za utworzenie ikonki ustawieñ. 
+- "**MoneyComponent.js**" - odpowiada za utworzenie ikonki pieniÄ™dzy. 
+- "**NavMenu.js**" - odpowiada za zawartoÅ›Ä‡ menu nagÅ‚Ã³wkowego na gÃ³rze ekranu.
+- "**NavMenu.scss**" - zawiera stylowanie menu nagÅ‚Ã³wkowego na gÃ³rze ekranu.
+- "**SettingsComponent.js**" - odpowiada za utworzenie ikonki ustawieÅ„. 
 
 
 
